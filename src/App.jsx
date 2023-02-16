@@ -7,22 +7,23 @@ import initialState from "./helpers/inititalState";
 function App() {
   const [city, setCity] = useState("");
   const [data, setData] = useState(initialState);
+  const [error, setError] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setError(false)
     fetchData(city)
-      .then((res) => {
+    .then((res) => {
         setData(res);
       })
       .catch((err) => {
-        console.log(err);
+        setError(true)
       });
   };
 
   return (
     <div className="flex flex-col w-full h-screen items-center justify-center dark:bg-slate-900 dark:text-gray-100 duration-100">
       <Switcher />
-
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -43,7 +44,8 @@ function App() {
         </button>
       </form>
 
-      <Card data={data} />
+      {!error ? <Card data={data} /> : <p className="text-red-500 mt-4">Ocorreu um erro inesperado!</p>}
+      
     </div>
   );
 }
