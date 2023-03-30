@@ -9,7 +9,7 @@
 <br>
 
 <p align="center">
-  <img alt="" src=".github/project.png" width="100%">
+  <img alt="weatherapp" src=".github/project.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
