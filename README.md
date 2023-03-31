@@ -28,3 +28,4 @@ Projeto que traz informações climáticas do local desejado.
 
 - [x] Informações em tempo real (clima, temperatura, umidade, etc)
 - [x] Buscas por qualquer lugar do mundo.
+- [x] Três opções de temas que podem ser alterados.
